@@ -9,7 +9,7 @@ import { EmployeeService } from '../../shared/employee.service';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor(public service: EmployeeService) { }
+  constructor( public employeeService: EmployeeService) { }
 
   departments = [
     { id: 3, value: 'Dep 1' },
@@ -22,8 +22,8 @@ export class EmployeeComponent implements OnInit {
   }
 
   onClear() {
-    this.service.form.reset();
-    this.service.initializeFormGroup();
+    this.employeeService.form.reset();
+    this.employeeService.initializeFormGroup();
   }
 
 }
